@@ -32,7 +32,11 @@ const setupCanvas = () => {
 const handleVideoFrame = () => {
   if (!moons || !video || !context) return
 
+  context.save()
+  context.translate(video.videoWidth, 0)
+  context.scale(-1, 1)
   context.drawImage(video, 0, 0, video.videoWidth, video.videoHeight)
+  context.restore()
 
   const { data } = context.getImageData(
     0,
