@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/vite.svg"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>MoonTube</title>
+
+    <link
+      rel="stylesheet"
+      href="/src/style.css"
+    />
+  </head>
+  <body>
+    <div
+      class="bg-white h-screen supports-[height:100dvh]:h-[100dvh] overflow-hidden"
+    >
+      <img
+        src="/moons.png"
+        id="moons"
+        class="hidden"
+      />
+
+      <video
+        id="video"
+        class="hidden"
+        muted
+      >
+        <!-- <source src="/never_gonna_give_you_up.mp4" /> -->
+      </video>
+
+      <canvas
+        id="canvas"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      ></canvas>
+    </div>
+
+    <script
+      type="module"
+      src="/src/main.ts"
+    ></script>
+  </body>
+</html>
